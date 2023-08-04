@@ -62,8 +62,8 @@ console.log(`\n\n`)
 var Salary_to_Hourly_Biweekly = function(pay, hours, weeks) {
     //variable names:
     var monthly_pay = (Number(pay * 2.166666667).toFixed(2))
-    var per_week = (Number(monthly_pay *12 / week).toFixed(2))
-    var hourly_pay = (Number(per_week/ h).toFixed(2))
+    var per_week = (Number(monthly_pay *12 / weeks).toFixed(2))
+    var hourly_pay = (Number(per_week/ hours).toFixed(2))
     var median_salary = (Number((monthly_pay  / (57200/ 12)) * 100).toFixed(1))
     return [hourly_pay, per_week, monthly_pay,median_salary]
      
@@ -111,7 +111,7 @@ console.log(`Calculation Results:\n\t Hourly Pay ${result5[0]}$ \n\t Per Week ${
 
 console.log(`\n\n`)
 //##########################################################################
-//--------------------Funcion Time and a Half--------------------//
+//--------------------Funcion Time and a Half Hourly--------------------//
 //##########################################################################
 
 var Time_and_a_Half_Hourly = function(hourly, worked_at_time_and_a_half, hours_standard){
@@ -122,6 +122,36 @@ var Time_and_a_Half_Hourly = function(hourly, worked_at_time_and_a_half, hours_s
     var Total_money_earned = Time_and_a_half_pay + Standard_pay
     return [Time_and_a_half_rate,Standard_hourly_rate , Time_and_a_half_pay,Standard_pay, Total_money_earned ]
 }
-result6= Time_and_a_Half_Hourly(15,0,1 )
+let result6= Time_and_a_Half_Hourly(15,0,1 )
 console.log(`Calculation Results: \n\t Time and a half rate: ${result6[0]} \n\t Standard hourly rate: ${result6[1]} \n\t Time and a half pay: ${result6[2]} \n\t Standard pay: ${result6[3]} \n\t Total money earned: ${result6[4]}`)
 
+
+console.log(`\n\n`)
+//##########################################################################
+//--------------------Funcion Time and a Half Daily--------------------//
+//##########################################################################
+
+var Time_and_a_Half_Daily= function(Standard_daily_pay, Hours_worked_per_standard_day, worked_at_time_and_a_half,hours_standard_worked ){
+    let Standard_hourly_rate = (Standard_daily_pay/ Hours_worked_per_standard_day)
+    let Time_and_a_half_rate = (Standard_hourly_rate * 1.5) 
+    let Time_and_a_half_pay = (Time_and_a_half_rate * worked_at_time_and_a_half)
+    let Standard_pay = (Standard_hourly_rate * hours_standard_worked )
+    let Total_money_earned = (Standard_pay + Time_and_a_half_pay)
+    return [Standard_hourly_rate, Time_and_a_half_rate,Time_and_a_half_pay,Standard_pay,Total_money_earned ]
+}
+let result7= Time_and_a_Half_Daily(15,8,1 ,2)
+console.log(`Calculation Results: \n\t Time and a half rate: ${result7[0]} \n\t Standard hourly rate: ${result7[1]} \n\t Time and a half pay: ${result7[2]} \n\t Standard pay: ${result7[3]} \n\t Total money earned: ${result7[4]}`)
+
+console.log(`\n\n`)
+//##########################################################################
+//--------------------Funcion Time and a Half Weekly--------------------//
+//##########################################################################
+/*
+let Time_and_a_Half_Weekly= function(Standard_weekly_pay, Standard_daily_pay, worked_at_time_and_a_half,hours_standard_worked ){
+    let Standard_hourly_rate = (Standard_daily_pay/Standard_daily_pay)
+    let Time_and_a_half_rate = (Standard_hourly_rate * 1.5) 
+    let Time_and_a_half_pay = (Time_and_a_half_rate * worked_at_time_and_a_half)
+    let Standard_pay = (Standard_hourly_rate * hours_standard_worked )
+    let Total_money_earned = (Standard_pay + Time_and_a_half_pay)
+    return [Standard_hourly_rate, Time_and_a_half_rate,Time_and_a_half_pay,Standard_pay,Total_money_earned ]
+    */

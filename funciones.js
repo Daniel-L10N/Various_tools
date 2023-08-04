@@ -1,48 +1,10 @@
-// Declaración
-function suma (a,b){
-    return a + b
+var Time_and_a_Half_Daily= function(Standard_daily_pay, Hours_worked_per_standard_day, worked_at_time_and_a_half,hours_standard_worked ){
+    let Standard_hourly_rate = (Standard_daily_pay/ Hours_worked_per_standard_day)
+    let Time_and_a_half_rate = (Standard_hourly_rate * 1.5) 
+    let Time_and_a_half_pay = (Time_and_a_half_rate * worked_at_time_and_a_half)
+    let Standard_pay = (Standard_hourly_rate * hours_standard_worked )
+    let Total_money_earned = (Standard_pay + Time_and_a_half_pay)
+    return [Standard_hourly_rate, Time_and_a_half_rate,Time_and_a_half_pay,Standard_pay,Total_money_earned ]
 }
-/* 
-function nombre (parámetros) {
-    contenido
-    return valor
-} 
-*/
-// Invocación
-suma(2,3)
-// nombre(argumentos)
-
-var resultado1 = suma(2,3)
-var resultado2 = suma(4,6)
-var resultado3 = suma(10,12)
-
-console.log(resultado1) //5
-console.log(resultado2) //10
-console.log(resultado3) //22
-
-//###########################################################################
-
-
-// Declaración
-function saludar(nombre){
-    console.log("Hola " + nombre) 
-}
-// Invocaciones
-saludar("JavaScript") //"Hola JavaScript"
-saludar("Platzi") // "Hola Platzi"
-
-
-console.log(`Hola ${nombre}`)
-
-
-//###########################################################################
-
-// Declaración
-var suma = function (a, b) {
-    return a + b
-  }
-  // Invocación
-  var resultado = suma(2, 2)
-  
-  console.log(resultado) //4
-  
+result7= Time_and_a_Half_Daily(15,8,1 ,2)
+console.log(`Calculation Results: \n\t Time and a half rate: ${result7[0]} \n\t Standard hourly rate: ${result7[1]} \n\t Time and a half pay: ${result7[2]} \n\t Standard pay: ${result7[3]} \n\t Total money earned: ${result7[4]}`)

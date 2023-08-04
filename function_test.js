@@ -1,4 +1,4 @@
-var Time_and_a_Half_Daily= function(Standard_daily_pay, Hours_worked_per_standard_day, worked_at_time_and_a_half,hours_standard_worked ){
+let Time_and_a_Half_Daily= function(Standard_daily_pay, Hours_worked_per_standard_day, worked_at_time_and_a_half,hours_standard_worked ){
     let Standard_hourly_rate = (Standard_daily_pay/ Hours_worked_per_standard_day)
     let Time_and_a_half_rate = (Standard_hourly_rate * 1.5) 
     let Time_and_a_half_pay = (Time_and_a_half_rate * worked_at_time_and_a_half)

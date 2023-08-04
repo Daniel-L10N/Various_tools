@@ -13,8 +13,8 @@ var Hourly_to_Salary= function(pay, hours, weeks) {
     
 }
 
-let result= Hourly_to_Salary(15, 10, 52)
-console.log(`Calculation Results:\n\t Annual Salary ${result[1]}$ \n\t Monthly Pay (avg) ${result[2]}$ \n\t Per Week Worked ${result[0]} \n\t % of US median salary ${result[3]}%` )
+let result0= Hourly_to_Salary(15, 10, 52)
+console.log(`Calculation Results:\n\t Annual Salary ${result0[1]}$ \n\t Monthly Pay (avg) ${result0[2]}$ \n\t Per Week Worked ${result0[0]} \n\t % of US median salary ${result0[3]}%` )
 
 
 
@@ -140,7 +140,7 @@ var Time_and_a_Half_Daily= function(Standard_daily_pay, Hours_worked_per_standar
     return [Standard_hourly_rate, Time_and_a_half_rate,Time_and_a_half_pay,Standard_pay,Total_money_earned ]
 }
 let result7= Time_and_a_Half_Daily(15,8,1 ,2)
-console.log(`Calculation Results: \n\t Time and a half rate: ${result7[0]} \n\t Standard hourly rate: ${result7[1]} \n\t Time and a half pay: ${result7[2]} \n\t Standard pay: ${result7[3]} \n\t Total money earned: ${result7[4]}`)
+console.log(`Calculation Results: \n\t Standard hourly rate: ${result7[0]} \n\t Time and a half rate: ${result7[1]} \n\t Time and a half pay: ${result7[2]} \n\t Standard pay: ${result7[3]} \n\t Total money earned: ${result7[4]}`)
 
 console.log(`\n\n`)
 //##########################################################################

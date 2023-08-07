@@ -3,7 +3,7 @@
 #crearemos un algoritmo
 
 #input paswork
-def enable(x , y):
+def Passwork():
     p= str(input('Es tablezca una contrace`na: '))
     c= str(input('Confirme su contrace`na: '))
     if p == c:
@@ -11,7 +11,8 @@ def enable(x , y):
         return  p
     else:
         print('Su contrace`na no coinside intentelo nuevamente ')
-        enable()
-paswork= enable()
+        Passwork()
+
+paswork= Passwork()
 
 print(f"su contracena es {paswork}")

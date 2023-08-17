@@ -39,6 +39,6 @@ let Loan_Calculator = function(loan_amount, annual_interest, years =0, months =0
    return [Monthly_payment,Total_interest_paid, Number_of_payments, Total_to_be_repaid, Estimated_payoff] 
 }
 
-let result0= Loan_Calculator(9000, 5, 0, 1,8)
+let result0= Loan_Calculator(20, 3, 2, 5,8)
 
 console.log(`Loan Summary: \n\t Monthly payment: ${result0[0]} \n\t Total interest paid  ${result0[1]} \n\t Number of payments:  ${result0[2]} \n\t Total to be repaid: ${result0[3]} \n\t Estimated payoff: ${result0[4]} `)

@@ -113,7 +113,7 @@ console.log(`\n\n`)
 //##########################################################################
 //--------------------Funcion Time and a Half Hourly--------------------//
 //##########################################################################
-
+5
 var Time_and_a_Half_Hourly = function(hourly, worked_at_time_and_a_half, hours_standard){
     var Standard_hourly_rate  = hourly 
     var Time_and_a_half_rate  = hourly * 1.50

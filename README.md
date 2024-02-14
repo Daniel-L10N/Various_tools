@@ -1,4 +1,5 @@
-# Repositorio de Proyectos Personales
+# Proyectos & Recursos personales
+![Erramientas](./recursos/gif/ecursos001.gif)
 
 Este repositorio se utiliza para almacenar los datos de mis proyectos personales, así como para guardar archivos necesarios como imágenes y otros recursos.
 
@@ -29,3 +30,4 @@ En la carpeta `/funciones` se encuentran scripts y funciones que son compartidos
 
 En esta capeta `/documentacion` se alla por capetas 
 diferentes frameworks y de estos puedes encontrar info util, como soluciones y explicaciones a diferentes problemas.
+

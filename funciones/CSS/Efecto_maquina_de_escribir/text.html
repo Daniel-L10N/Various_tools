@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto Maquina de Escribir</title>
+</head>
+<body>
+    <style>
+@keyframes typing{
+  from { width: 0}
+}
+
+@keyframes blink {
+  50% { border-color: transparent;}
+}
+
+.title-logo{
+  display: block;
+  font-family: system-ui;
+  white-space: nowrap;
+  border-right: 3px solid;
+  width: 38ch;
+  
+}
+.typic{
+    animation: typing 4.1s steps(38) ,
+  blink .8s infinite step-end alternate;
+  overflow: hidden;
+}
+</style>
+<h1 class="title-logo typic">DaniTsof 👋welcomes you to our REST API 🌐</h1>
+
+</body>
+</html>

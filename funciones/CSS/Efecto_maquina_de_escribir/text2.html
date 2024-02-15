@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto Maquina de Escribir</title>
+    <style>
+        @keyframes typing {
+            from { width: 0 }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        .title-logo {
+            display: block;
+            font-family: system-ui;
+            white-space: nowrap;
+            border-right: 3px solid;
+            width: 38ch;
+            animation: typing 4.1s steps(38), blink .8s infinite step-end alternate;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title-logo" id="texto-cambiante">DaniTsof 👋welcomes you to our REST API 🌐</h1>
+
+    <script>
+        const textos = ["DaniTsof 👋welcomes you to our REST API 🌐", "DaniTsof 👋welcomes you to our REST API 🌐", "DaniTsof 👋welcomes you to our REST API 🌐"]; // Agrega los nuevos mensajes que quieras mostrar
+        let contador = 0;
+
+        function typeWriter(texto, i) {
+            if (i < texto.length) {
+                document.getElementById('texto-cambiante').textContent = texto.substring(0, i + 1);
+                setTimeout(() => {
+                    typeWriter(texto, i + 1);
+                }, 100); // Velocidad de escritura
+            } else {
+                setTimeout(() => {
+                    deleteAndChangeText();
+                }, 1500); // Tiempo antes de borrar y cambiar el texto
+            }
+        }
+
+        function deleteAndChangeText() {
+            let textoActual = document.getElementById('texto-cambiante').textContent;
+            if (textoActual.length > 0) {
+                document.getElementById('texto-cambiante').textContent = textoActual.substring(0, textoActual.length - 1);
+                setTimeout(() => {
+                    deleteAndChangeText();
+                }, 50); // Velocidad de borrado
+            } else {
+                contador = (contador + 1) % textos.length;
+                typeWriter(textos[contador], 0);
+            }
+        }
+
+        typeWriter(textos[contador], 0);
+    </script>
+</body>
+</html>

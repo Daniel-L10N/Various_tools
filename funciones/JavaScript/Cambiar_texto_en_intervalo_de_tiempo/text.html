@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de texto</title>
+</head>
+<body>
+    <span id="text"></span>
+
+<script>
+    const textoCambiante = document.getElementById('text');
+    console.log(textoCambiante)
+    let contador = 0;
+    const textos = ['Texto 1', 'Texto 2', 'Texto 3'];
+    
+
+
+    setInterval(() => {
+        textoCambiante.textContent = textos[contador];
+        console.log(textoCambiante.textContent)
+        contador = (contador + 1) % textos.length;
+}, 500); // Tiempo en milisegundos en que se ejecuta el setInterval
+</script>  
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wavy Text</title>
+</head>
+
+<body>
+    <div class="wavy">
+        <span class="s1">L</span>
+        <span class="s2">o</span>
+        <span class="s3">a</span>
+        <span class="s4">d</span>
+        <span class="s5">i</span>
+        <span class="s6">n</span>
+        <span class="s7">g</span>
+        <span class="s8">.</span>
+        <span class="s9">.</span>
+        <span class="s10">.</span>
+    </div>
+</body>
+<style>
+    .s1 {
+        --i: 1
+    }
+
+    .s2 {
+        --i: 2
+    }
+
+    .s2 {
+        --i: 2
+    }
+
+    .s3 {
+        --i: 3
+    }
+
+    .s4 {
+        --i: 4
+    }
+
+    .s5 {
+        --i: 5
+    }
+
+    .s6 {
+        --i: 6
+    }
+
+    .s7 {
+        --i: 7
+    }
+
+    .s8 {
+        --i: 8
+    }
+
+    .s9 {
+        --i: 9
+    }
+
+    .s10 {
+        --i: 10
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: consolas;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000000;
+    }
+
+    .wavy {
+        position: relative;
+        -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+
+    }
+
+    .wavy span {
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        font-size: 2rem;
+        text-transform: uppercase;
+        animation: animate 1s ease-in-out infinite;
+        animation-delay: calc(0.1s * var(--i));
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translateY(0px);
+        }
+
+        20% {
+            transform: translateY(-20px);
+        }
+
+        40%,
+        100% {
+            transform: translateY(0px);
+        }
+    }
+</style>
+
+</html>
